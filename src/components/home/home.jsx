@@ -12,12 +12,7 @@ const Home = ()=>{
 
     return(
         <div>
-        {
-            data.map((img)=>{
-                return(
-                  <Image images={img}></Image>
-                )    })
-        }
+                  <Image images={data && data}></Image>
         </div>
     )
 }
