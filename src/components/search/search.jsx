@@ -18,7 +18,7 @@ class Search extends Component{
              }
              else{
             fetch(
-                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=53d481cc8df4a39b533a80b868e40220&text=${this.state.searchText}&safe_search=1&extras=description%2C+url_sq&per_page=500&page=5&format=json&nojsoncallback=1`
+                `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=53d481cc8df4a39b533a80b868e40220&text=${this.state.searchText}&safe_search=1&extras=description%2C+url_sq%2Curl_z%2Curl_c&per_page=500&page=5&format=json&nojsoncallback=1`
             ).then(res => res.json())
             .then(data=>
                 this.setState({images:data.photos.photo})
