@@ -1,18 +1,17 @@
 import React from "react";
 
+import Search from "../search/search";
+
 import {LoadImages} from "../../api";
-
-import Image from "../image/image";
-
 const Home = ()=>{
 
-  const data = LoadImages();
-
-  console.log(data);
+const data = LoadImages();
+ 
 
     return(
         <div>
-                  <Image images={data && data}></Image>
+        <Search data={data}></Search>
+                  
         </div>
     )
 }
