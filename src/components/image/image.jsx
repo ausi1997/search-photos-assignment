@@ -6,7 +6,6 @@ import ImageListItemBar from '@material-ui/core/ImageListItemBar';
 import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import { Dialog } from "@material-ui/core";
-import DialogActions from '@material-ui/core/DialogActions';
 import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +39,7 @@ const Image = (props)=>{
     return(
         <div className={classes.root}>
       <ImageList rowHeight={200} cols={4}>
-        {props.images.map((item) => (
+        {props.images && props.images.map((item) => (
           <ImageListItem>
             <img src={item.url_z} alt={item.title} />
             <ImageListItemBar

@@ -17,7 +17,7 @@ class Search extends Component{
                  this.setState({images:[]});
              }
              else{
-            fetch(
+            fetch(       // calling the search api
                 `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=53d481cc8df4a39b533a80b868e40220&text=${this.state.searchText}&safe_search=1&extras=description%2C+url_sq%2Curl_z%2Curl_c&per_page=500&page=5&format=json&nojsoncallback=1`
             ).then(res => res.json())
             .then(data=>
@@ -28,7 +28,7 @@ class Search extends Component{
           } });
     };
 
-    render(){
+    render(){                  // if we have not search any images then it will pass the default data otherwise the searched data
         console.log(this.state.images);
         return(
             <div>
